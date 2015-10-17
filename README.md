@@ -1,4 +1,7 @@
-## 流程 (图） + 说明
+## 流程 (图）
+
+
+![gpstrackerandroid](http://7xjtgq.com1.z0.glb.clouddn.com/interface.png)
 
 
 
