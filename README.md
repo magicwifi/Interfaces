@@ -15,38 +15,48 @@
 
 
 ## 对外接口（写操作） 
-# doctor 
-* 创建路径: Post /doctors
-* 参数说明 
-id: 医生主键
-name： 医生姓名
-avatar： 头像路径
-main_desc： 简要说明
-url： 主页地址
+# doctor
+ 
+创建路径: Post /doctors
+
+参数说明 
+
+* id: 医生主键
+* name：医生姓名
+* avatar：头像路径
+* main_desc: 简要说明
+* url: 主页地址
 
 返回值：
-{result：200}： 调用成功
-{result：400}： 调用失败
+
+* {result：200} 调用成功
+* {result：400} 调用失败
 
 
 更新路径：Post /doctors/:id
+
 参数说明：(同上)
+
 返回值：
-{result：200}： 调用成功
-{result：400}： 调用失败 
+
+* {result：200}： 调用成功
+* {result：400}： 调用失败 
 
 
 # reply
+
 创建路径：Post /reply
+
 参数说明：
-id: 回复主键
-reply_desc: 回复内容
-basic_case_id: 对应咨询编号
+
+* id: 回复主键
+* reply_desc: 回复内容
+* basic_case_id: 对应咨询编号
 
 
 返回值：
-{result：200}： 调用成功
-{result：400}： 调用失败 
+* {result：200}： 调用成功
+* {result：400}： 调用失败 
 
 
 
