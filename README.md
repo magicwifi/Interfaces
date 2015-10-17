@@ -74,7 +74,7 @@
             "name": "xiaowei",#姓名
             "user_id":15 #用户id
             "basic_case_id":20, #咨询id
-            "main_desc:"xxx" 咨询主题
+            "main_desc:"" #咨询主题
         },
         ...
     ]
