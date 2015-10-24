@@ -130,7 +130,7 @@ http://117.34.78.201:8081/92/show_basic_case.json
 ###返回说明
 ```javascript
 {	"code" #调用成功,
-	"basic_case":{"id":92,
+	"basic_case":{"id":92,	#基本信息
 	"main_desc":"hi", #主诉
 	"detail_desc":"heqwe",	#详细描述
 	"treat_desc":"",	#诊疗经过
@@ -142,7 +142,7 @@ http://117.34.78.201:8081/92/show_basic_case.json
 	"public":true,	#用户是否公开病历
 	"doctor_id":1,	#咨询医生主键
 	"process":"fee"},
-	"body_sign":{"id":77,	
+	"body_sign":{"id":77,	#体征信息
 	"temperature":0,	#体温
 	"pulse":0,		#脉搏每分钟
 	"high_pressure":30,	#高压
@@ -152,7 +152,7 @@ http://117.34.78.201:8081/92/show_basic_case.json
 	"created_at":"2015-10-21T20:30:38.000+08:00",
 	"updated_at":"2015-10-22T19:36:57.000+08:00"
 	,"status_name":"xiongmen yanqianfahei "},	#其他体征
-	"sick_assets":[{"id":20,"
+	"sick_assets":[{"id":20,"	#附件信息
 	title":"hllo",	#附件名称
 	"desc":"eqw",	#附件描述
 	"created_at":"2015-10-22T19:37:40.000+08:00",
@@ -167,34 +167,6 @@ http://117.34.78.201:8081/92/show_basic_case.json
 	"asset_type":"CT"	#附件类型
 	}]	
 
-
-	
-	"basic_case":
-	{
-	"main_desc":"xxx",#主诉
-	"detail_desc":"XX",#详细描述
-	"treat_desc":"" #诊疗经过
-    "now_desc":"" #目前情况
-    },
-    "body_sign":{
-     "temperature":38, #体温
-     "pulse":120, #心跳
-     "high_pressure":110, #高压
-     "low_pressure":90, #低压
-     "swelling":"xx", #肿胀
-     "status_name":"" #其他体征
-     },
-     “sick_asset”:[
-	     {
-	     	"title":"xx",#附件标题
-	     	"desc":"xx",#附件说明
-	     	"asset":"xxxx",#附件url
-	     	"asset_type":"xxxx",#附件类型
-
-    	 },
-
-     ...
-     ]
     }
 
 }
@@ -203,4 +175,102 @@ http://117.34.78.201:8081/92/show_basic_case.json
 
 
 ## 读取某病人病历信息
+
+###传入病人ID
+
+样例路径
+
+http://117.34.78.201:8081/32/92/show_basic_info.json
+
+
+
+###返回说明
+```javascript
+{	
+     	code:"200", #调用成功
+	"basic_info":{"id":28, 
+	"name":"李明达",	#病人姓名
+	"height":175.0,		#病人身高
+	"weight":64.0,		#病人体重
+	"gender":"male",	#病人性别
+	"edited":true,		
+	"user_id":32,		
+	"created_at":"2015-10-21T20:30:38.000+08:00",
+	"updated_at":"2015-10-22T19:50:02.000+08:00",
+	"age":35,		#病人年龄
+	"smokeinfo":"sometimes",	#病人是否抽烟
+	"drink":"never",		#病人是否喝酒
+	"smoke_account":5},		#每天吸烟多少根
+	"hyperlipidemia":{"id":15,	#高脂血		
+	"ishave":false,			#是否确诊
+	"diagnosis_date":"2001-02-03T08:00:00.000+08:00",	#确诊日期
+	"user_id":32,	
+	"created_at":"2015-10-21T20:30:38.000+08:00",
+	"updated_at":"2015-10-21T20:30:38.000+08:00"},
+	"diabetes":{"id":17,	#糖尿病
+	"ishave":true,	#是否确诊
+	"limosis":60,	#餐前血糖
+	"after_meal":120, #餐后血糖	
+	"diagnosis_date":"2001-02-03T00:00:00.000+08:00",	#确诊日期
+	"user_id":32,
+	"created_at":"2015-10-21T20:30:38.000+08:00",
+	"updated_at":"2015-10-22T19:34:42.000+08:00"},
+	"hypertension":{"id":19,	#高血压
+	"ishave":true,		#是否确诊
+	"before_high":120,	#最高高压
+	"before_low":60,	#最高低压
+	"now_high":120,		#当前高压
+	"now_low":60,		#当前低压
+	"diagnosis_date":"2001-02-03T00:00:00.000+08:00",	#患病日期
+	"user_id":32,
+	"created_at":"2015-10-21T20:30:38.000+08:00",
+	"updated_at":"2015-10-22T19:34:35.000+08:00"},
+	"operation":[{"id":5,	#重大手术及外伤
+	"title":"eqwe",		#手术名称
+	"desc":"eee",		#详细说明
+	"created_at":"2015-10-22T19:35:27.000+08:00",
+	"updated_at":"2015-10-22T19:35:34.000+08:00",
+	"poster":null,"public":null,	
+	"price":null,
+	"asset":"FuP0n2bDalakqHmm4rI3Pgg18k5n",	#手术附件路径	
+	"user_id":32,
+	"size":64135,
+	"filename":"xulie1.jpg",
+	"content_type":"image/jpeg",
+	"position":1,
+	"sick_date":"2015-10-23T00:00:00.000+08:00"}],	#手术日期
+	"sicknesses":[{"id":24,	#病历附件路径
+	"title":"heelo",	#病历名称
+	"desc":"min",	#病历描述
+	"created_at":"2015-10-22T19:35:46.000+08:00",
+	"updated_at":"2015-10-22T19:35:55.000+08:00",
+	"poster":null,
+	"public":null,
+	"price":null,
+	"asset":"Fob0C1KawzlWP6-7UV-sleO9-Rn2",	#病历附件路径
+	"user_id":32,"size":53224,
+	"filename":"android1.jpg",	#病历名称
+	"content_type":"image/jpeg",
+	"position":1,
+	"sick_date":"2015-10-23T00:00:00.000+08:00"},
+	...
+	]
+}
+```
+---
+
+
+###
+其他说明
+
+七牛云存储根目录：
+
+http://7xmw39.com1.z0.glb.clouddn.com/
+
+
+
+
+
+
+
 
