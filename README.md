@@ -26,6 +26,9 @@
 * avatar：头像路径
 * main_desc: 简要说明
 * url: 主页地址
+* price: 单价
+
+测试程序 python create_doctor.py  23  Jack
 
 返回值：
 
@@ -33,12 +36,50 @@
 * {result：400} 调用失败
 
 
-更新路径：Post /doctors/:id
+更新路径：
+
+* Post /:doctor_id/update_doctor_avatar	修改头像
+* Post /:doctor_id/update_doctor_url	修改主页
+* Post /:doctor_id/update_main_desc	修改说明
+* Post /:doctor_id/update_price		修改价格
+
 
 参数说明：(同上)
 
 返回值：
 
+
+测试程序 
+
+python update_doctor_main_desc.py  23 testtest
+
+python update_doctor_price.py 23 88
+
+python update_doctor_avatar.py 23 http://h.hiphotos.baidu.com/baike/w%3D790/sign=087bc013a6ec08fa260011ae69ef3d4d/2934349b033b5bb53692445230d3d539b700bcd1.jpg
+
+python create_reply.py 96 22 hew
+
+
+返回值：
+
+* {result：200} 调用成功
+* {result：400} 调用失败
+
+
+## reply
+
+创建路径：Post /reply
+
+参数说明：
+
+* id: 回复主键
+* reply_desc: 回复内容
+* basic_case_id: 对应咨询编号
+
+
+返回值：
+* {result：200}： 调用成功
+* {result：400}： 调用失败 
 * {result：200}： 调用成功
 * {result：400}： 调用失败 
 
