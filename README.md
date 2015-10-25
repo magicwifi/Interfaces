@@ -268,6 +268,16 @@ http://117.34.78.201:8081/32/92/show_basic_info.json
 http://7xmw39.com1.z0.glb.clouddn.com/
 
 
+医生主页咨询路径:  
+
+提交咨询 Post /check_my_doctor 
+
+参数 doctor 医生姓名
+
+commit	标示为commit时为提交咨询  标示为new时为新的咨询
+
+
+
 
 
 
