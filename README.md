@@ -23,10 +23,23 @@
 
 * doctor_id: 医生主键
 * name：医生姓名
-* avatar：头像路径
+* avatar：头像路径(可为空)
 * main_desc: 简要说明
 * url: 主页地址
+* hospital: 医院
+* room:	科室
+* rank: 职称
+* level: 华仁医生级别
+* sex: 性别
+* speciality: 擅长
+
+Reservation 预约
+
+* support_number: 预约人数
 * price: 单价
+* type: 类型
+* remark: 备注 （可为空）
+
 
 测试程序 python create_doctor.py  23  Jack
 
@@ -41,7 +54,8 @@
 * Post /:doctor_id/update_doctor_avatar	修改头像
 * Post /:doctor_id/update_doctor_url	修改主页
 * Post /:doctor_id/update_main_desc	修改说明
-* Post /:doctor_id/update_price		修改价格
+* 修改某类预约的价格
+* 修改某类预约的预约人数
 
 
 参数说明：(同上)
@@ -75,7 +89,8 @@ python create_reply.py 96 22 hew
 * doctor_id: 医生编号
 * main_desc: 回复内容
 * basic_case_id: 对应咨询编号
-* sick_name: 疾病名称
+* sick_name1: 一级疾病名称
+* sick_name2: 二级疾病名称
 
 测试程序：
 
@@ -86,6 +101,13 @@ python create_reply.py 97 23 hello
 * {result：200}： 调用成功
 * {result：400}： 调用失败 
 
+## basic_case更新接口（加号）
+
+更新路径：Post /:basic_case_id/:doctor_id/plus_basic_cas
+
+* doctor_id: 医生编号
+* basic_case_id: 对应咨询编号
+* isplus: 是否加号
 
 
 # 对外接口（读取操作）
@@ -109,7 +131,9 @@ http://117.34.78.201:8081/10/index_basic_cases.json
 	"user_id":27,	#待诊病人编号
 	"user_name":"not open",	#待诊病人姓名
 	"user_age":"not open",	#待诊病人年龄
-	"user_gender":"not open"},	#待诊病人性别
+	"user_gender":"not open"
+	"haveImage": true #是否有影像
+	},	#待诊病人性别
         ...
     ]
 }
