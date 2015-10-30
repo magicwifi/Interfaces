@@ -54,8 +54,6 @@ Reservation 预约
 * Post /:doctor_id/update_doctor_avatar	修改头像
 * Post /:doctor_id/update_doctor_url	修改主页
 * Post /:doctor_id/update_main_desc	修改说明
-* 修改某类预约的价格
-* 修改某类预约的预约人数
 
 
 参数说明：(同上)
@@ -67,20 +65,20 @@ Reservation 预约
 
 python update_doctor_main_desc.py  23 testtest
 
-python update_doctor_price.py 23 88
 
 python update_doctor_avatar.py 23 http://h.hiphotos.baidu.com/baike/w%3D790/sign=087bc013a6ec08fa260011ae69ef3d4d/2934349b033b5bb53692445230d3d539b700bcd1.jpg
 
-python create_reply.py 96 22 hew
+
+* Post /:doctor_id//update_doctor_reservation
+* 修改某类预约的价格
+* 修改某类预约的预约人数
 
 
-返回值：
-
-* {result：200} 调用成功
-* {result：400} 调用失败
+python update_doctor_reservation.py 23 fee 88
 
 
 ## reply
+
 
 创建路径：Post /:basic_case_id/:doctor_id/create_reply
 
@@ -89,25 +87,25 @@ python create_reply.py 96 22 hew
 * doctor_id: 医生编号
 * main_desc: 回复内容
 * basic_case_id: 对应咨询编号
-* sick_name1: 一级疾病名称
-* sick_name2: 二级疾病名称
+* sick_name: 一级疾病名称
+* sick_name_sub: 二级疾病名称
 
 测试程序：
-
-python create_reply.py 97 23 hello
-
+python create_reply.py 105 23 hew hello
 
 返回值：
-* {result：200}： 调用成功
-* {result：400}： 调用失败 
 
-## basic_case更新接口（加号）
+* {result：200} 调用成功
+* {result：400} 调用失败
 
-更新路径：Post /:basic_case_id/:doctor_id/plus_basic_cas
 
-* doctor_id: 医生编号
+
+# 更新接口（加号）
+
+更新路径：Post /:basic_case_id/update_plus
+
 * basic_case_id: 对应咨询编号
-* isplus: 是否加号
+* allow_plus: 是否加号
 
 
 # 对外接口（读取操作）
@@ -132,7 +130,8 @@ http://117.34.78.201:8081/10/index_basic_cases.json
 	"user_name":"not open",	#待诊病人姓名
 	"user_age":"not open",	#待诊病人年龄
 	"user_gender":"not open"
-	"haveImage": true #是否有影像
+	"have_ct": true #是否有影像
+	"process": 'fee' #咨询类型
 	},	#待诊病人性别
         ...
     ]
