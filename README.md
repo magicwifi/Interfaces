@@ -41,7 +41,22 @@ Reservation 预约
 * remark: 备注 （可为空）
 
 
-测试程序 python create_doctor.py  23  Jack
+测试程序 python create_doctor.py  33  Huangzhe
+
+返回值：
+
+* {result：200} 调用成功
+* {result：400} 调用失败
+
+
+### 更新路径：
+
+* Post /:doctor_id/update_doctor_avatar	修改头像
+* Post /:doctor_id/update_doctor_url	修改主页
+* Post /:doctor_id/update_main_desc	修改说明
+
+
+参数说明：(同上)
 
 返回值：
 
@@ -63,18 +78,38 @@ Reservation 预约
 
 测试程序 
 
-python update_doctor_main_desc.py  23 testtest
+python update_doctor_main_desc.py  33 testtest
 
 
-python update_doctor_avatar.py 23 http://h.hiphotos.baidu.com/baike/w%3D790/sign=087bc013a6ec08fa260011ae69ef3d4d/2934349b033b5bb53692445230d3d539b700bcd1.jpg
+python update_doctor_avatar.py 33 http://h.hiphotos.baidu.com/baike/w%3D790/sign=087bc013a6ec08fa260011ae69ef3d4d/2934349b033b5bb53692445230d3d539b700bcd1.jpg
 
+
+### 补充 咨询属性更新接口：
 
 * Post /:doctor_id//update_doctor_reservation
 * 修改某类预约的价格
 * 修改某类预约的预约人数
 
 
-python update_doctor_reservation.py 23 fee 88
+python update_doctor_reservation.py 33 fee 88
+
+
+测试程序 
+
+python update_doctor_main_desc.py  33 testtest
+
+
+python update_doctor_avatar.py 33 http://h.hiphotos.baidu.com/baike/w%3D790/sign=087bc013a6ec08fa260011ae69ef3d4d/2934349b033b5bb53692445230d3d539b700bcd1.jpg
+
+
+### 补充 咨询属性更新接口：
+
+* Post /:doctor_id//update_doctor_reservation
+* 修改某类预约的价格
+* 修改某类预约的预约人数
+
+
+python update_doctor_reservation.py 33 fee 88
 
 
 ## reply
@@ -91,7 +126,7 @@ python update_doctor_reservation.py 23 fee 88
 * sick_name_sub: 二级疾病名称
 
 测试程序：
-python create_reply.py 105 23 hew hello
+python create_reply.py 108 33 hew hello
 
 返回值：
 
@@ -106,6 +141,9 @@ python create_reply.py 105 23 hew hello
 
 * basic_case_id: 对应咨询编号
 * allow_plus: 是否加号
+
+
+python update_plus.py 108
 
 
 # 对外接口（读取操作）

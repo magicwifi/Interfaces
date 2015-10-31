@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 import urllib  
 import urllib2  
 
-def main(basic_case_id,doctor_id,sick_name):  
-	payload = {'sick_name':sick_name,'main_desc':'test'}
+def main(basic_case_id,doctor_id,sick_name,sick_sub_name):  
+	payload = {'sick_name':sick_name,'main_desc':'test','sick_sub_name':sick_sub_name}
 	url = "http://117.34.78.201:8081/"+basic_case_id+"/"+doctor_id+"/create_reply"
 	headers = { "Accept":"text/html,application/xhtml+xml,application/xml;",
             "Accept-Encoding":"gzip",
@@ -22,11 +22,12 @@ def main(basic_case_id,doctor_id,sick_name):
 	print result
 
 if __name__ == '__main__':  
-	if len(sys.argv) != 4:
+	if len(sys.argv) != 5:
 		print 'Usage: python input_name output_name'
 		exit(1)
 	basic_case_id = sys.argv[1]
 	doctor_id = sys.argv[2]
 	sick_name = sys.argv[3]
-	main(basic_case_id,doctor_id,sick_name) 
+	sick_sub_name = sys.argv[4]
+	main(basic_case_id,doctor_id,sick_name,sick_sub_name) 
 
