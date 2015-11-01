@@ -299,13 +299,18 @@ http://117.34.78.201:80/32/92/show_basic_info.json
 
 ### 医生咨询页面对接说明
 
-入口1 找医生 -->> 医生主页 -->> 发起咨询 -->> 提交咨询
-入口2 快速咨询-->> 找医生-->> 医生主页 -->> 提交咨询
+* 入口1 找医生 -->> 医生主页 -->> 发起咨询 -->> 提交咨询
+* 入口2 快速咨询-->> 找医生-->> 医生主页 -->> 提交咨询
 
-入口1 医生主页参数设置参见
+两个入口医生主页内容展现一致，提交参数位置不同
 
 
-入口2 医生主页参数设置参见
+入口1 医生主页参数设置参见 [doctor_commit.html.erb][1]
+
+
+
+入口2 医生主页参数设置参见 [show.html.erb][2] 
+
 
 
 
@@ -313,11 +318,14 @@ http://117.34.78.201:80/32/92/show_basic_info.json
 其他说明
 
 七牛云存储根目录：
-
 http://7xmw39.com1.z0.glb.clouddn.com/
 
 
+----------
 
+
+  [1]: https://github.com/magicwifi/Interfaces/doctor_commit.html.erb
+  [2]: https://github.com/magicwifi/Interfaces/show.html.erb
 
 
 
