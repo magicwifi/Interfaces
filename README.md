@@ -314,8 +314,7 @@ http://117.34.78.201:80/32/92/show_basic_info.json
 
 
 
-###
-其他说明
+### 其他说明
 
 七牛云存储根目录：
 http://7xmw39.com1.z0.glb.clouddn.com/
@@ -324,8 +323,8 @@ http://7xmw39.com1.z0.glb.clouddn.com/
 ----------
 
 
-  [1]: https://github.com/magicwifi/Interfaces/doctor_commit.html.erb
-  [2]: https://github.com/magicwifi/Interfaces/show.html.erb
+  [1]: https://github.com/magicwifi/Interfaces/blob/master/doctor_commit.html.erb
+  [2]: https://github.com/magicwifi/Interfaces/blob/master/show.html.erb
 
 
 
