@@ -60,21 +60,6 @@ Reservation 预约
 
 返回值：
 
-* {result：200} 调用成功
-* {result：400} 调用失败
-
-
-### 更新路径：
-
-* Post /:doctor_id/update_doctor_avatar	修改头像
-* Post /:doctor_id/update_doctor_url	修改主页
-* Post /:doctor_id/update_main_desc	修改说明
-
-
-参数说明：(同上)
-
-返回值：
-
 
 测试程序 
 
@@ -101,15 +86,6 @@ python update_doctor_main_desc.py  33 testtest
 
 python update_doctor_avatar.py 33 http://h.hiphotos.baidu.com/baike/w%3D790/sign=087bc013a6ec08fa260011ae69ef3d4d/2934349b033b5bb53692445230d3d539b700bcd1.jpg
 
-
-### 补充 咨询属性更新接口：
-
-* Post /:doctor_id//update_doctor_reservation
-* 修改某类预约的价格
-* 修改某类预约的预约人数
-
-
-python update_doctor_reservation.py 33 fee 88
 
 
 ## reply
@@ -153,7 +129,7 @@ python update_plus.py 108
 
 样例路径
 
-http://117.34.78.201:8081/10/index_basic_cases.json
+http://117.34.78.201:80/10/index_basic_cases.json
 
 
 
@@ -185,7 +161,7 @@ http://117.34.78.201:8081/10/index_basic_cases.json
 
 样例路径
 
-http://117.34.78.201:8081/92/show_basic_case.json
+http://117.34.78.201:80/92/show_basic_case.json
 
 
 ###返回说明
@@ -241,7 +217,7 @@ http://117.34.78.201:8081/92/show_basic_case.json
 
 样例路径
 
-http://117.34.78.201:8081/32/92/show_basic_info.json
+http://117.34.78.201:80/32/92/show_basic_info.json
 
 
 
@@ -321,6 +297,18 @@ http://117.34.78.201:8081/32/92/show_basic_info.json
 ---
 
 
+### 医生咨询页面对接说明
+
+入口1 找医生 -->> 医生主页 -->> 发起咨询 -->> 提交咨询
+入口2 快速咨询-->> 找医生-->> 医生主页 -->> 提交咨询
+
+入口1 医生主页参数设置参见
+
+
+入口2 医生主页参数设置参见
+
+
+
 ###
 其他说明
 
@@ -329,13 +317,6 @@ http://117.34.78.201:8081/32/92/show_basic_info.json
 http://7xmw39.com1.z0.glb.clouddn.com/
 
 
-医生主页咨询路径:  
-
-提交咨询 Post /check_my_doctor 
-
-参数 doctor 医生姓名
-
-commit	标示为commit时为提交咨询  标示为new时为新的咨询
 
 
 
